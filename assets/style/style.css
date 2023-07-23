@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../font/Shabnam.eot') format('eot');
+    src: url('../font/fonts/Shabnam.ttf') format('truetype'),
+        url('../font/Shabnam.woff') format('woff');
+}
+
+:root{
+    --main: #1D1E26;
+    --simillar: #262932;
+    --text: #bebebe;
+    --bg: #6A5FE8;
+    --hover: #5246dd;
+    --border: #384759;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    direction: rtl;
+    overflow-x: hidden;
+    font-family: 'shabnam';
+    background: var(--main);
+    color: var(--text);
+}
