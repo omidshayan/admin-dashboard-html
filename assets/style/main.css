@@ -18,12 +18,15 @@
 .d-none{
     display: none;
 }
-.flex-between{
+.justify-between{
     justify-content: space-between;
 }
 
 
 /* genrals */
+.text-size{
+    font-size: 14px;
+}
 .input{
     background-color: var(--main);
     border: none;
@@ -39,9 +42,6 @@
 .border{
     border-radius: 6px;
 }
-.fs15{
-    font-size: 15px;
-}
 .center{
     text-align: center;
 }
@@ -53,6 +53,19 @@
 .cursor-p{
     cursor: pointer;
 }
+
+
+/* fonts */
+.fs15{
+    font-size: 15px;
+}
+.fs14{
+    font-size: 14px;
+}
+.fs11{
+    font-size: 11px;
+}
+
 
 
 

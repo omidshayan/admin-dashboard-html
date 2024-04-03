@@ -27,36 +27,114 @@
         </div>
         <div class="sidebar-item">
           <ul>
-            <li>
-              <a href="index.html" class="active">
-                <i class="fas fa-tachometer-alt"></i>
-                <span>dashboard</span>
+            <!-- dashboard -->
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span>dashboard</span>
+                </span>
               </a>
             </li>
+
+
+
+            <!-- menu and submenu -->
+            <li class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown">
+              <a href="#" class="d-flex align-center justify-between dddd">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span>محصولات </span>
+                </div>
+                <i class="fas fa-chevron-down fs11 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span >شب که میشه</span>
+                </span>
+              </a>
+            </li>
+
+
+            <li class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown">
+              <a href="#" class="d-flex align-center justify-between">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span>محصولات </span>
+                </div>
+                <i class="fas fa-chevron-down fs11 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+
+                <li class="sidebar-dropdown-menu-item">
+                  <a href="#">sub menu</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span >dashboard</span>
+                </span>
+              </a>
+            </li>
+
+<!-- 
             <li>
               <a href="input-insert.html">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>input insert</span>
               </a>
             </li>
+
             <li>
               <a href="table.html">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>table</span>
               </a>
             </li>
+
             <li>
               <a href="btns.html">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>btn</span>
               </a>
             </li>
+
             <li>
               <a href="paginations.html">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>paginations</span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -64,14 +142,14 @@
     <!-- end sidebar -->
 
     <!-- start appbar  -->
-    <div class="appbar d-flex flex-between align-center">
+    <div class="appbar d-flex justify-between align-center">
       <div class="appbar-item-r d-flex align-center">
         <span class="hamber cursor-p">
-            <i class="fas fa-bars ml-10"></i>
+          <i class="fas fa-bars ml-10"></i>
         </span>
         <div class="appbar-search d-flex border">
-            <i class="fas fa-bars ml-10 search-icon"></i>
-            <input type="text" class="p5 fs15 input" placeholder="search...">
+          <i class="fas fa-bars ml-10 search-icon"></i>
+          <input type="text" class="p5 fs15 input" placeholder="search..." />
         </div>
       </div>
       <div class="appbar-item-l">
@@ -118,6 +196,7 @@
     <!-- end content -->
 
     <script src="assets/js/FontAwesomeAll.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -47,7 +47,7 @@ body{
 .sidebar{
     width: 290px;
     height: auto;
-    padding: 20px 14px;
+    padding: 20px 0px;
     position: fixed;
     top: 0;
     right: 0;
@@ -62,7 +62,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: var(--simillar);
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     border: 1px solid var(--border);
     overflow-y: auto;
@@ -73,7 +73,6 @@ body{
 .sidebar-section::-webkit-scrollbar-thumb {
     background-color: var(--border) !important;
 }
-
 .brand-name{
     color: var(--bg);
     margin-bottom: 20px;
@@ -90,6 +89,9 @@ body{
     border: 1px solid var(--bg);
     border-radius: 50%;
 }
+.sidebar-icon{
+    font-size: 14px;
+}
 .info-avatar{
     display: flex;
     justify-content: space-between;
@@ -98,23 +100,25 @@ body{
 .text-avatar{
     padding-left: 10px;
 }
-
 .sidebar-item{
     margin-top: 30px;
 }
-.sidebar-item li{
-    padding-bottom: 10px;
-}
 .sidebar-item li a{
+    border-radius: 10px;
     color: var(--text);
-    padding: 15px 0;
-    display: block;
+    padding: 12px 10px;
     transition: all .3s ease-in;
 }
-.testt.active{
-    background: var(--border);
-    padding-right: 10px;
+.sidebar-item li.focused > a{
     border-radius: 10px;
+    background-color: var(--hover);
+    transition: 0.4s;
+}
+.sidebar-item li .sidebar-arrow{
+    transition: 0.3s;
+}
+.sidebar-item li.focused .sidebar-arrow{
+    transform: rotateZ(180deg);
 }
 /* end sidebar */
 
@@ -368,3 +372,6 @@ body{
         width: 100%;
     }
 }
+
+
+
