@@ -109,6 +109,14 @@ body{
     padding: 12px 10px;
     transition: all .3s ease-in;
 }
+.sidebar-menu:hover{
+    transition: 0.3s;
+    background-color: var(--border);
+}
+.sidebar-menu:hover{
+    transition: 0.3s;
+    background-color: var(--border);
+}
 .sidebar-item li.focused > a{
     border-radius: 10px;
     background-color: var(--hover);
@@ -119,6 +127,14 @@ body{
 }
 .sidebar-item li.focused .sidebar-arrow{
     transform: rotateZ(180deg);
+}
+.sidebar-dropdown-menu li {
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+.sidebar-dropdown-menu li:hover{
+    background-color: #334253;
 }
 /* end sidebar */
 
