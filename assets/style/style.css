@@ -103,7 +103,7 @@ body{
 .sidebar-item{
     margin-top: 30px;
 }
-.sidebar-item li a{
+.sidebar-item li > a{
     border-radius: 10px;
     color: var(--text);
     padding: 12px 10px;
@@ -111,11 +111,7 @@ body{
 }
 .sidebar-menu:hover{
     transition: 0.3s;
-    background-color: var(--border);
-}
-.sidebar-menu:hover{
-    transition: 0.3s;
-    background-color: var(--border);
+    background-color: #33425373;
 }
 .sidebar-item li.focused > a{
     border-radius: 10px;
@@ -132,6 +128,7 @@ body{
     padding: 10px 20px;
     transition: 0.3s;
     font-size: 15px;
+    color: var(--text);
 }
 .sidebar-dropdown-menu li:hover{
     background-color: #334253;
