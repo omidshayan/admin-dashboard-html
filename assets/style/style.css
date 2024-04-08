@@ -138,11 +138,32 @@ body{
 /* start content */
 .content{
     margin-right: 285px;
-    padding: 2rem 1.2rem 2rem 2rem;
+    padding: 2rem 1.2rem 2rem 1rem;
     transition: all 0.5s;
 }
 .content.active{
     margin-right: 0;
+}
+.larg-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0px 35px 50px var(--shadow);
+    background-color: var(--simillar);
+    border: 1px solid var(--border);
+    padding: 30px 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+.small-container{
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 35px 50px var(--shadow);
+    background-color: var(--simillar);
+    border: 1px solid var(--border);
+    padding: 30px 20px;
+    border-radius: 5px;
+    overflow-x: auto;
 }
 .appbar{
     margin-right: 285px;
@@ -159,27 +180,21 @@ body{
     background-color: var(--main);
     border: 1px solid var(--border);
     position: relative;
+    margin-right: 50px;
+    width: 300px;
 }
 .search-icon{
     position: absolute;
     left: 0;
     top: 7px;
 }
-/* content */
-.content-container{
-    box-shadow: 0px 35px 50px var(--shadow);
-    background-color: var(--simillar);
-    border: 1px solid var(--border);
-    padding: 30px 20px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-
 .report{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .report-item{
     width: calc(33% - 20px);

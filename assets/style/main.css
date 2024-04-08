@@ -33,6 +33,8 @@
     border-radius: 6px;
     color: var(--text);
     transition: 0.3s;
+    width: 298px !important;
+    padding: 8px !important;
 }
 .input:focus {
     outline: none !important;
