@@ -67,6 +67,9 @@
 .fs11{
     font-size: 11px;
 }
+.fs18{
+    font-size: 18px;
+}
 
 
 
@@ -87,7 +90,9 @@
 .mt20{
     margin-top: 20px;
 }
-
+.mr5{
+    margin-right: 5px;
+}
 
 /* padding */
 .p20{

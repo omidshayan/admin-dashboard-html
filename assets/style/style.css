@@ -165,6 +165,8 @@ body{
     border-radius: 5px;
     overflow-x: auto;
 }
+
+/* start appbar */
 .appbar{
     margin-right: 285px;
     padding: 2rem 1.2rem 2rem 2rem;
@@ -188,6 +190,28 @@ body{
     left: 0;
     top: 7px;
 }
+.events{
+    background-color: red;
+    padding: 5px;
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    top: 20px;
+    left: 140px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.events > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* end appbar */
+
 .report{
     display: flex;
     align-items: center;
