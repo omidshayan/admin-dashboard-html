@@ -51,6 +51,10 @@
     width: 100%;
     background-color: var(--simillar);
     border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    max-width: 1450px;
+    margin: 0 auto;
 }
 .cursor-p{
     cursor: pointer;

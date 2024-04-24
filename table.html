@@ -1,150 +1,228 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
     <title>آریا تکنالوژی هرات</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- start sidebar -->
-    <input type="text" id="menu-toggle">
+    <input type="text" id="menu-toggle" />
     <div class="sidebar">
-        <div class="sidebar-section">
-            <div class="brand-name">
-                Arya Tech
+      <div class="sidebar-section">
+        <div class="brand-name">Arya Tech</div>
+        <div class="avatar">
+          <div class="img-avatar">
+            <img src="assets/img/profile.png" alt="" />
+          </div>
+          <div class="info-avatar">
+            <div class="text-avatar">
+              <div>User name</div>
             </div>
-            <div class="avatar">
-                <div class="img-avatar">
-                    <img src="assets/img/profile.png" alt="">
-                </div>
-                <div class="info-avatar">
-                    <div class="text-avatar">
-                        <div>Arya Tech Co</div>
-                    </div>
-                    <span class="fas fa-chevron-down"></span>
-                </div>
-            </div>
-            <div class="sidebar-item">
-                <ul>
-                    <li><a href="index.html" class="active">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>dashboard</span>
-                    </a></li>
-                <li>
-                    <a href="input-insert.html">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>input insert</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>table</span>
-                    </a>
-                </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>item</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>item</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </div>
+        <div class="sidebar-item">
+          <ul>
+            <!-- dashboard -->
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">dashboard</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- menu and submenu -->
+            <li
+              class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown"
+            >
+              <a href="#" class="d-flex align-center justify-between dddd">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span class="mr5">محصولات </span>
+                </div>
+                <i class="fas fa-sort-down fs13 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+              </ul>
+            </li>
+
+            <li class="sidebar-menu">
+              <a href="table.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">جدول</span>
+                </span>
+              </a>
+            </li>
+
+            <li
+              class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown"
+            >
+              <a href="#" class="d-flex align-center justify-between dddd">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span class="mr5">کاربران</span>
+                </div>
+                <i class="fas fa-sort-down fs13 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+              </ul>
+            </li>
+
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">خروج</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <!-- end sidebar -->
 
+    <!-- start appbar  -->
+    <div class="appbar d-flex justify-between align-center">
+      <div class="appbar-item-r d-flex align-center">
+        <span class="hamber cursor-p">
+          <i class="fas fa-bars ml-10"></i>
+        </span>
+        <div class="appbar-search d-flex border">
+          <form action="">
+            <i class="fas fa-search ml-10 search-icon"></i>
+            <input type="text" class="p5 fs15 input" placeholder="search..." />
+          </form>
+        </div>
+      </div>
+      <div class="appbar-item-l">
+        <div class="msg-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-envelope ml-20 cursor-p fs18"></i>
+        <div class="notif-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-bell ml-20 cursor-p fs18"></i>
+        <div class="other-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-bell ml-20 cursor-p fs18"></i>
+      </div>
+    </div>
+    <!-- end appbar -->
+
     <!-- content -->
     <div class="content">
-        <header>
-            <div class="hamber">
-                <i class="fas fa-bars"></i>
-            </div>
-        </header>
-        <main>
-            <div class="title">
-                <div class="title-text">title in page</div>
-            </div>
-            <br>
-            <!-- start page content -->
-            <div class="content-container">
-                <table class="fl-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>name</th>
-                            <th>product </th>
-                            <th>item</th>
-                            <th>price</th>
-                            <th>print</th>
-                            <th>edit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>book</td>
-                            <td>book 1</td>
-                            <td>programming</td>
-                            <td>230 </td>
-                            <td><a href="#"><i class="fas fa-print"></i></a></td>
-                            <td><a href="#"><i class="fas fa-edit"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>book</td>
-                            <td>book 1</td>
-                            <td>programming</td>
-                            <td>230 </td>
-                            <td><a href="#"><i class="fas fa-print"></i></a></td>
-                            <td><a href="#"><i class="fas fa-edit"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>book</td>
-                            <td>book 1</td>
-                            <td>programming</td>
-                            <td>230 </td>
-                            <td><a href="#"><i class="fas fa-print"></i></a></td>
-                            <td><a href="#"><i class="fas fa-edit"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>book</td>
-                            <td>book 1</td>
-                            <td>programming</td>
-                            <td>230 </td>
-                            <td><a href="#"><i class="fas fa-print"></i></a></td>
-                            <td><a href="#"><i class="fas fa-edit"></i></a></td>
-                        </tr>
-                    <tbody>
-                </table>
-                <div class="flex-justify-align mt20">
-                    <span class="flex-justify-align paginate-item">First</span>
-                    <span class="flex-justify-align paginate-item">1</span>
-                    <span class="flex-justify-align paginate-item">2</span>
-                    <span class="flex-justify-align paginate-item">3</span>
-                    <span class="flex-justify-align paginate-item">4</span>
-                    <span class="flex-justify-align paginate-item">End</span>
-                </div>
-            </div>
-            <!-- end page content -->
-        </main>
+        <div class="content-title">title in page</div>
+      <br />
+      <!-- start page content -->
+      <div class="content-container">
+        <table class="fl-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>name</th>
+              <th>product</th>
+              <th>item</th>
+              <th>price</th>
+              <th>print</th>
+              <th>edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>book</td>
+              <td>book 1</td>
+              <td>programming</td>
+              <td>230</td>
+              <td>
+                <a href="#"><i class="fas fa-print"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>book</td>
+              <td>book 1</td>
+              <td>programming</td>
+              <td>230</td>
+              <td>
+                <a href="#"><i class="fas fa-print"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>book</td>
+              <td>book 1</td>
+              <td>programming</td>
+              <td>230</td>
+              <td>
+                <a href="#"><i class="fas fa-print"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>book</td>
+              <td>book 1</td>
+              <td>programming</td>
+              <td>230</td>
+              <td>
+                <a href="#"><i class="fas fa-print"></i></a>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody></tbody>
+        </table>
+
+        <div class="flex-justify-align mt20">
+          <span class="flex-justify-align paginate-item"><</span>
+          <span class="flex-justify-align paginate-item">1</span>
+          <span class="flex-justify-align paginate-item">2</span>
+          <span class="flex-justify-align paginate-item">3</span>
+          <span class="flex-justify-align paginate-item">4</span>
+          <span class="flex-justify-align paginate-item">></span>
+        </div>
+      </div>
+      <!-- end page content -->
     </div>
     <!-- end content -->
 
     <script src="assets/js/FontAwesomeAll.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
