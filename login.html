@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <title>آریا تکنالوژی هرات</title>
+  </head>
+
+  <body>
+    <!-- start sidebar -->
+    <input type="text" id="menu-toggle" />
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <div class="brand-name">Arya Tech</div>
+        <div class="avatar">
+          <div class="img-avatar">
+            <img src="assets/img/profile.png" alt="" />
+          </div>
+          <div class="info-avatar">
+            <div class="text-avatar">
+              <div>User name</div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <ul>
+            <!-- dashboard -->
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">dashboard</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- menu and submenu -->
+            <li
+              class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown"
+            >
+              <a href="#" class="d-flex align-center justify-between dddd">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span class="mr5">محصولات </span>
+                </div>
+                <i class="fas fa-sort-down fs13 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+              </ul>
+            </li>
+
+            <li class="sidebar-menu">
+              <a href="table.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">جدول</span>
+                </span>
+              </a>
+            </li>
+
+            <li
+              class="sidebar-menu ri-dashboard-line sidebar-menu-item has-dropdown"
+            >
+              <a href="#" class="d-flex align-center justify-between dddd">
+                <div>
+                  <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                  <span class="mr5">کاربران</span>
+                </div>
+                <i class="fas fa-sort-down fs13 sidebar-arrow"></i>
+              </a>
+              <ul class="sidebar-dropdown-menu">
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+
+                <a href="#">
+                  <li class="sidebar-dropdown-menu-item">زیر منو</li>
+                </a>
+              </ul>
+            </li>
+
+            <li class="sidebar-menu">
+              <a href="index.html" class="d-flex align-center justify-between">
+                <span>
+                  <i class="fas fa-tachometer-alt fs14"></i>
+                  <span class="mr5">خروج</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end sidebar -->
+
+    <!-- start appbar  -->
+    <div class="appbar d-flex justify-between align-center">
+      <div class="appbar-item-r d-flex align-center">
+        <span class="hamber cursor-p">
+          <i class="fas fa-bars ml-10"></i>
+        </span>
+        <div class="appbar-search d-flex border">
+          <form action="">
+            <i class="fas fa-search ml-10 search-icon"></i>
+            <input type="text" class="p5 fs15 input" placeholder="search..." />
+          </form>
+        </div>
+      </div>
+      <div class="appbar-item-l">
+        <div class="msg-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-envelope ml-20 cursor-p fs18"></i>
+        <div class="notif-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-bell ml-20 cursor-p fs18"></i>
+        <div class="other-events"><span class="text-white"> 9+ </span></div>
+        <i class="fas fa-bell ml-20 cursor-p fs18"></i>
+      </div>
+    </div>
+    <!-- end appbar -->
+
+    <!-- content -->
+    <div class="content">
+      <div class="content-title">forms</div>
+      <br />
+      <!-- start page content -->
+      <div class="content-container">
+        <div class="insert">
+            <form action="">
+                <div>title name</div>
+                <input type="text" placeholder="title..." name="name" autocomplete="off">
+                <div role="option"></div>
+                <div>select option </div>
+                <select name="select">
+                    <option selected disabled>please select item</option>
+                    <option value="item 1">item 1</option>
+                    <option value="item 2">item 2</option>
+                    <option value="item 3">item 3</option>
+                </select>
+                <div>title name </div>
+                <input type="text" placeholder="title name..." name="name">
+                <div>title name </div>
+                <input type="text" placeholder=" title name..." name="model">
+                <div>title name</div>
+                <input type="text" placeholder=" title name..." name="color">
+                <input type="submit" value="insert" class="btn">
+            </form>
+        </div>
+      </div>
+      <!-- end page content -->
+    </div>
+    <!-- end content -->
+
+    <script src="assets/js/FontAwesomeAll.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
