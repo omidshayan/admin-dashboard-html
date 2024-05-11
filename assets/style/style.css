@@ -448,11 +448,6 @@ body{
     margin-right: 0;
     width: 100% ;
 }
-.appbar-profile{
-    width: 40px;
-    height: 40px;
-    background-color: red;
-}
 .sidebar.active{
     transform: translateX(0%);
 }
