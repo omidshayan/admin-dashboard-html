@@ -6,6 +6,7 @@ const menuToggle = document.querySelector("#menu-toggle");
 const left_menu_active = document.querySelector("#left-menu-active");
 const settings = document.querySelector(".settings");
 const setting = document.querySelector(".setting");
+const closeLeftMenu = document.querySelector('.closeLeftMenu');
 
 hamber.addEventListener("click", function () {
   sidebar.classList.toggle("active");
@@ -29,6 +30,10 @@ left_menu_active.addEventListener("click", function () {
 });
 
 settings.addEventListener("click", function () {
+  setting.classList.toggle("active-left-menu");
+  left_menu_active.classList.toggle("left-menu-active");
+});
+closeLeftMenu.addEventListener("click", function () {
   setting.classList.toggle("active-left-menu");
   left_menu_active.classList.toggle("left-menu-active");
 });
