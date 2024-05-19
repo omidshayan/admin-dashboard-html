@@ -1,23 +1,22 @@
-const sidebar = document.querySelector('.sidebar');
-const hamber = document.querySelector('.hamber');
-const mainContent = document.querySelector('.content');
-const appbar = document.querySelector('.appbar');
-const menuToggle = document.querySelector('#menu-toggle');
+const sidebar = document.querySelector(".sidebar");
+const hamber = document.querySelector(".hamber");
+const mainContent = document.querySelector(".content");
+const appbar = document.querySelector(".appbar");
+const menuToggle = document.querySelector("#menu-toggle");
 
-hamber.addEventListener('click', function(){
-     sidebar.classList.toggle('active')
-     mainContent.classList.toggle('active');
-     appbar.classList.toggle('active');
-     menuToggle.classList.toggle('active')
-})
+hamber.addEventListener("click", function () {
+  sidebar.classList.toggle("active");
+  mainContent.classList.toggle("active");
+  appbar.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+});
 
-menuToggle.addEventListener('click', function(){
-     sidebar.classList.toggle('active')
-     mainContent.classList.toggle('active');
-     appbar.classList.toggle('active');
-     menuToggle.classList.toggle('active')
-})
-
+menuToggle.addEventListener("click", function () {
+  sidebar.classList.toggle("active");
+  mainContent.classList.toggle("active");
+  appbar.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+});
 
 // Sidebar submenu
 $(".sidebar-dropdown-menu").slideUp("fast");
@@ -34,23 +33,40 @@ $(
   $(this).parent().toggleClass("focused");
 });
 
+$(".sidebar-toggle").click(function () {
+  $(".sidebar").toggleClass("collapsed");
 
-$('.sidebar-toggle').click(function() {
-    $('.sidebar').toggleClass('collapsed')
+  $(".sidebar.collapsed").mouseleave(function () {
+    $(".sidebar-dropdown-menu").slideUp("fast");
+    $(
+      ".sidebar-menu-item.has-dropdown, .sidebar-dropdown-menu-item.has-dropdown"
+    ).removeClass("focused");
+  });
+});
 
-    $('.sidebar.collapsed').mouseleave(function() {
-        $('.sidebar-dropdown-menu').slideUp('fast')
-        $('.sidebar-menu-item.has-dropdown, .sidebar-dropdown-menu-item.has-dropdown').removeClass('focused')
-    })
-})
+$(".sidebar-overlay").click(function () {
+  $(".sidebar").addClass("collapsed");
 
-$('.sidebar-overlay').click(function() {
-    $('.sidebar').addClass('collapsed')
+  $(".sidebar-dropdown-menu").slideUp("fast");
+  $(
+    ".sidebar-menu-item.has-dropdown, .sidebar-dropdown-menu-item.has-dropdown"
+  ).removeClass("focused");
+});
 
-    $('.sidebar-dropdown-menu').slideUp('fast')
-    $('.sidebar-menu-item.has-dropdown, .sidebar-dropdown-menu-item.has-dropdown').removeClass('focused')
-})
+if (window.innerWidth < 768) {
+  $(".sidebar").addClass("collapsed");
+}
 
-if(window.innerWidth < 768) {
-    $('.sidebar').addClass('collapsed')
+// dark and light mode
+document.addEventListener("DOMContentLoaded", function () {
+  let darkModeEnabled = localStorage.getItem("darkModeEnabled");
+  if (darkModeEnabled === "true") {
+    document.body.classList.add("light-mode");
+  }
+});
+function toggleDarkMode() {
+  let body = document.body;
+  body.classList.toggle("light-mode");
+  let darkModeEnabled = body.classList.contains("light-mode");
+  localStorage.setItem("darkModeEnabled", darkModeEnabled);
 }

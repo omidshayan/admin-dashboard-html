@@ -7,12 +7,16 @@
     --main: #1D1E26;
     --simillar: #262932;
     --text: #bebebe;
+    
+    --simillar-light: #ffffff;
+    --text-light: #313131;
+    --main-light: #f0f0f5;
+
     --bg: #6A5FE8;
     --hover: #5246dd;
-    --border: #384759;
+    --border: #38475960;
     --shadow: rgba(0,0,0,0.54);
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +25,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
 body{
     direction: rtl;
     overflow-x: hidden;
@@ -30,7 +33,11 @@ body{
     color: var(--text);
     font-family: "vazir";
 }
-
+body.light-mode {
+    --main: var(--main-light);
+    --simillar:  var(--simillar-light);
+    --text: var(--text-light)
+}
 /* start sidebar */
 #menu-toggle{
     position: absolute;
