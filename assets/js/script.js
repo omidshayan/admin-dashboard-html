@@ -3,6 +3,8 @@ const hamber = document.querySelector(".hamber");
 const mainContent = document.querySelector(".content");
 const appbar = document.querySelector(".appbar");
 const menuToggle = document.querySelector("#menu-toggle");
+const tr = document.querySelector(".tr");
+const setting = document.querySelector(".setting");
 
 hamber.addEventListener("click", function () {
   sidebar.classList.toggle("active");
@@ -16,6 +18,10 @@ menuToggle.addEventListener("click", function () {
   mainContent.classList.toggle("active");
   appbar.classList.toggle("active");
   menuToggle.classList.toggle("active");
+});
+
+tr.addEventListener("click", function () {
+  setting.classList.toggle("omid");
 });
 
 // Sidebar submenu

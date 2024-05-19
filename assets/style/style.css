@@ -257,6 +257,19 @@ body.light-mode {
     font-size: 12px;
     font-weight: 500;
 }
+/* setting start */
+.setting{
+    width: 250px;
+    height: 100vh;
+    background-color: rebeccapurple;
+    position: absolute;
+    left: -260px;
+    top: 0;
+    transition: 0.4s;
+}
+.setting.omid{
+    transform: translateX(100%);
+}
 /* end appbar */
 
 .report{
@@ -423,7 +436,6 @@ body.light-mode {
 .paginate-item:hover{
     background-color: var(--hover);
 }
-
 
 
 
