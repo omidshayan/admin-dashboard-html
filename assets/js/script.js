@@ -3,7 +3,8 @@ const hamber = document.querySelector(".hamber");
 const mainContent = document.querySelector(".content");
 const appbar = document.querySelector(".appbar");
 const menuToggle = document.querySelector("#menu-toggle");
-const tr = document.querySelector(".tr");
+const left_menu_active = document.querySelector("#left-menu-active");
+const settings = document.querySelector(".settings");
 const setting = document.querySelector(".setting");
 
 hamber.addEventListener("click", function () {
@@ -20,8 +21,16 @@ menuToggle.addEventListener("click", function () {
   menuToggle.classList.toggle("active");
 });
 
-tr.addEventListener("click", function () {
-  setting.classList.toggle("omid");
+
+// left menu
+left_menu_active.addEventListener("click", function () {
+  left_menu_active.classList.toggle("left-menu-active");
+  setting.classList.toggle("active-left-menu");
+});
+
+settings.addEventListener("click", function () {
+  setting.classList.toggle("active-left-menu");
+  left_menu_active.classList.toggle("left-menu-active");
 });
 
 // Sidebar submenu

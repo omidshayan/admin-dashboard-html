@@ -10,7 +10,8 @@
 
   <body>
     <!-- start sidebar -->
-    <input type="text" id="menu-toggle" />
+    <input type="text" id="menu-toggle"/>
+    <input type="text" id="left-menu-active"/>
     <div class="sidebar">
       <div class="sidebar-section">
         <div class="brand-name">Arya Tech</div>
@@ -131,20 +132,20 @@
         </div>
       </div>
       <div class="appbar-item-l">
+        <span class="settings cursor-p">
+          <i class="fas fa-bars ml-50"></i>
+        </span>
         <div class="msg-events"><span class="text-white"> 9+ </span></div>
         <i class="fas fa-envelope ml-20 cursor-p fs18"></i>
         <div class="notif-events"><span class="text-white"> 9+ </span></div>
         <i class="fas fa-bell ml-20 cursor-p fs18"></i>
         <div class="other-events"><span class="text-white"> 9+ </span></div>
         <i class="fas fa-bell ml-20 cursor-p fs18"></i>
-        <button class="fas" onclick="toggleDarkMode()"></button>
       </div>
 
-      <span class="tr cursor-p">
-        <div class="setting">ddddd</div>
-        <i class="fas fa-bars ml-10"></i>
-      </span>
-        dfdf
+      <div class="setting">
+        <button class="fas" onclick="toggleDarkMode()"></button>
+      </div>
     </div>
     <!-- end appbar -->
 
