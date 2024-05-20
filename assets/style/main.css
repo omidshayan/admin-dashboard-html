@@ -70,8 +70,8 @@
 }
 
 /* colors */
-.text-color{
-    color: white;
+.color{
+    color: var(--text);
 }
 .text-white{
     color: white;

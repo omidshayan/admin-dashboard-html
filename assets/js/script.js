@@ -8,6 +8,37 @@ const settings = document.querySelector(".settings");
 const setting = document.querySelector(".setting");
 const closeLeftMenu = document.querySelector('.closeLeftMenu');
 
+// events
+const show_msg = document.querySelector('.show-msg');
+const shwo_msg_events = document.querySelector('.show-msg-events');
+
+// Function to close menu
+function closeMenu() {
+  shwo_msg_events.classList.remove("active");
+}
+
+// Toggle menu when clicking the icon
+show_msg.addEventListener("click", function (event) {
+  event.stopPropagation(); // Prevent click event from propagating to document
+  shwo_msg_events.classList.toggle("active");
+});
+
+// Close menu when clicking outside the menu
+document.addEventListener("click", function (event) {
+  const targetElement = event.target;
+
+  // Check if the clicked element is not the menu or the icon, then close the menu
+  if (!targetElement.closest('.show-msg-events') && !targetElement.closest('.show-msg')) {
+    closeMenu();
+  }
+});
+
+
+
+
+
+
+
 hamber.addEventListener("click", function () {
   sidebar.classList.toggle("active");
   mainContent.classList.toggle("active");
