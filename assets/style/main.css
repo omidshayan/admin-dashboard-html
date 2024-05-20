@@ -24,6 +24,12 @@
 
 
 /* genrals */
+.w17{
+    width: 17px;
+}
+.w20{
+    width: 20px;
+}
 .text-size{
     font-size: 14px;
 }
