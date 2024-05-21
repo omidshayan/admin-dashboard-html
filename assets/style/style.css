@@ -253,14 +253,14 @@ body.light-mode {
     width: 200px;
     height: 30px;
 }
-.event-ul-item > li{
+.event-ul-item > a li{
     margin-top: 10px;
     padding: 8px;
     transition: 0.4s;
     cursor: pointer;
+    color: var(--text);
 }
-.event-ul-item > li:hover{
-    margin-top: 10px;
+.event-ul-item > a li:hover{
     background-color: var(--main);
 }
 .show-msg-events::-webkit-scrollbar {

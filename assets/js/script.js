@@ -10,6 +10,7 @@ const closeLeftMenu = document.querySelector('.closeLeftMenu');
 
 // events
 const show_msg = document.querySelector('.show-msg');
+const notif_events = document.querySelector('.notif-events');
 const shwo_msg_events = document.querySelector('.show-msg-events');
 
 // Function to close menu
@@ -23,6 +24,7 @@ show_msg.addEventListener("click", function (event) {
   shwo_msg_events.classList.toggle("active");
 });
 
+
 // Close menu when clicking outside the menu
 document.addEventListener("click", function (event) {
   const targetElement = event.target;
@@ -35,6 +37,10 @@ document.addEventListener("click", function (event) {
 
 
 
+notif_events.addEventListener("click", function (event) {
+  event.stopPropagation(); // Prevent click event from propagating to document
+  shwo_msg_events.classList.toggle("active");
+});
 
 
 
