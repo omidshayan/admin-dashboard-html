@@ -244,14 +244,19 @@ body.light-mode {
 }
 .header-msg{
     background-color: var(--simillar);
-    width: 200px;
+    width: 194px;
     height: 35px;
     position: fixed;
 }
 .b-msg{
     background-color: var(--simillar);
-    width: 200px;
-    height: 30px;
+    width: 194px;
+    height: 35px;
+    position: fixed;
+    top: 325px;
+}
+.b-msg:hover{
+    text-decoration: underline;
 }
 .event-ul-item > a li{
     margin-top: 10px;
@@ -646,6 +651,9 @@ body.light-mode {
 @media screen and (max-width: 770px) {
     .appbar-search{
         display: none !important;
+    }
+    .inputs{
+        display: block !important;
     }
 }
 
