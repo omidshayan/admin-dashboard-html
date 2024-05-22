@@ -658,4 +658,104 @@ body.light-mode {
 }
 
 
-
+/* login & register */
+.login {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+    position: relative;
+}
+.avatar-login {
+    margin-top: 50px;
+}
+.avatar-login img {
+    width: 90px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+.login-form {
+    width: 350px;
+    height: auto;
+    background-color: var(--simillar);
+    color: var(--text);
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding-bottom: 30px;
+    border: 1px solid var(--hover);
+    position: relative;
+}
+.login-form h3 {
+    margin-top: 10px;
+}
+.login-form span {
+    font-size: 12px;
+    position: absolute;
+    right: 36px;
+}
+.login-form input {
+    padding: 5px;
+    background-color: var(--main);
+    border: 1px solid var(--hover);
+    width: 280px;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.5s;
+    outline: none;
+}
+.login-form input:focus {
+    outline: none !important;
+    border: 1px solid var(--hover);
+    box-shadow: 0 0 8px var(--hover);
+    transition: 0.5s;
+}
+.btn-custom {
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--bg) !important;
+}
+.btn-custom:hover {
+    background-color: var(--main) !important;
+}
+.remember-checkbox{
+    margin: 0 !important;
+    width: 15px !important;
+    height: 17px !important;
+}
+.check-title{
+    margin-right: 6px;
+}
+.remember-login{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto 15px auto;
+    font-size: 13px;
+}
+.label-input{
+    text-align: right;
+    margin: 17px 35px 5px 0;
+}
+.other-auth{
+    text-align: right;
+    margin-right: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.other-auth a{
+    color: #e2ae02;
+    text-decoration: underline;
+    font-size: 13px;
+}
+.forget-pass{
+    margin-bottom: 10px;
+}
