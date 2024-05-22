@@ -472,7 +472,7 @@ body.light-mode {
     text-align: center;
     border-radius: 5px;
 }
-.insert div{
+.insert > div{
     text-align: right;
     margin-right: 5.5%;
     margin-bottom: 4px;
@@ -510,9 +510,26 @@ body.light-mode {
 .insert input:focus {
     outline: none !important;
     border:1px solid var(--hover);
-    box-shadow: 0 0 8px var(--shadow);
+    box-shadow: 0 0 8px var(--hover);
     transition: 0.5s;
   }
+.inputs{
+    width: 90%;
+    margin: 20px auto !important;
+}
+.one{
+    width: 100% !important;
+}
+.one > input{
+    width: 99%;
+}
+.one > select{
+    width: 99%;
+}
+.label-form{
+    text-align: right;
+    margin-right: 10px;
+}
 .btn{
     background-color: var(--bg) !important;
     cursor: pointer;
