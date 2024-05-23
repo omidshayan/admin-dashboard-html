@@ -759,3 +759,9 @@ body.light-mode {
 .forget-pass{
     margin-bottom: 10px;
 }
+.input-error{
+    color: red;
+    margin-top: 38px;
+    font-size: 10px !important;
+}
+/* end auth */

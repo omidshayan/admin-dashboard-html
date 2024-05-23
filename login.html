@@ -6,8 +6,16 @@
     <link rel="icon" href="https://www.ghalib.edu.af/front_asset/images/logo2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/js/jquery.min.js"></script>
     <title>ورود به سیستم</title>
 </head>
+
+<script>
+    $(document).ready(function() {
+        $("#phone").hide();
+        $("#password").hide();
+    });
+</script>
 
 <body>
         <!-- login form -->
@@ -19,14 +27,16 @@
                 </div><br>
                 <form action="login-check.php" method="POST">
                     <div class="label-input"> شماره موبایل </div>
-                    <input type="text" name="phone" class="omid" placeholder="شماره موبایل خود را وارد کنید..." required>
+                    <input type="text" name="phone" class="omid" placeholder="شماره موبایل خود را وارد کنید...">
+                    <span class="input-error" id="phone">لطفا اطلاعات را وارد نمایید</span>
                     <div class="label-input">رمزعبور</div>
-                    <input type="password" name="password" placeholder="رمزعبور خود را وارد کنید..." required>
+                    <input type="password" name="password" placeholder="رمزعبور خود را وارد کنید...">
+                    <span class="input-error" id="password">لطفا اطلاعات را وارد نمایید</span>
                     <div class="remember-login">
                         <input type="checkbox" id="checkbox" checked class="remember-checkbox">
                         <label for="checkbox" class="check-title">مرا به خاطر بسپار</label>
                     </div>
-                    <input type="submit" value=" ورود " class="btn-custom btn-color">
+                    <input type="submit" id="submit" value=" ورود " class="btn-custom btn-color">
                 </form>
                 <div class="other-auth">
                     <div class="forget-pass">فراموشی رمزعبور - <a href="#">کلیک کنید</a></div>
