@@ -534,6 +534,7 @@ body.light-mode {
 .label-form{
     text-align: right;
     margin-right: 10px;
+    
 }
 .btn{
     background-color: var(--bg) !important;
