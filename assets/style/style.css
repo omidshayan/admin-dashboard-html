@@ -493,7 +493,6 @@ body.light-mode {
     transition: 0.5s;
     outline: none;
     border: 1px solid var(--bg);
-    margin-bottom: 25px;
 }
 .insert select{
     background-color: var(--main);
@@ -526,6 +525,8 @@ body.light-mode {
 }
 .one > input{
     width: 99%;
+    margin-bottom:5px;
+
 }
 .one > select{
     width: 99%;
@@ -609,6 +610,69 @@ body.light-mode {
     height: auto;
     border: 1px solid var(--border);
     margin: 0 auto;
+}
+
+/* collapse */
+  .accordion{
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px auto;
+    background-color: var(--simillar);
+  }
+  .accordion div:not(:last-child){
+     border-bottom: 1px solid var(--border);
+  }
+  .accordion > div button{
+    background-color: var(--main);
+      border: none;
+      outline: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    transition: 100ms ease;
+      width: 100%;
+    padding:10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text);
+  }
+  .accordion > div button i{
+    transition: 200ms ease;
+  }
+  .accordion > div{
+    overflow: hidden;
+    transition: 300ms ease;
+  }
+  .accordion > div p{
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  /* accourdion */
+.accordion-title{
+    background: var(--main);
+    font-size: 16px;
+    padding: 5px;
+    color: var(--text);
+    border: 1px solid #303030;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 90%;
+    margin: 0 auto;
+}
+.accordion-title:hover{
+    background: var(--hover);
+}
+.accordion-content{
+    width: 90%;
+    background: var(--main);
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+}
+.child-accordioin {
+    width: 100%;
 }
 
 
