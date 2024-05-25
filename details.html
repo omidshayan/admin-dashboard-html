@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style/style.css" />
     <link rel="stylesheet" href="assets/style/main.css" />
-    <script src="assets/js/jquery.min.js"></script>
     <title>آریا تکنالوژی هرات</title>
   </head>
 
@@ -13,38 +12,7 @@
     <input type="text" id="menu-toggle" />
     <input type="text" id="left-menu-active" />
 
-    <script>
-      $(document).ready(function() {
-          function checkInputError(input) {
-              let value = $(input).val().trim();
-              if (value === "") {
-                  $(input).addClass('border-error');
-              } else {
-                  $(input).removeClass('border-error');
-              }
-          }
-          $(".checkInput").on("input", function() {
-              checkInputError(this);
-          });
-          $("#submit").click(function(e) {
-              let inputs = $(".checkInput");
-              let emptyInputs = [];
-
-              inputs.each(function() {
-                  checkInputError(this);
-                  if ($(this).val().trim() === "") {
-                      emptyInputs.push(this);
-                  }
-              });
-              if (emptyInputs.length > 0) {
-                  e.preventDefault();
-                  $(emptyInputs[0]).focus();
-              }
-          });
-      });
-  </script>
     <!-- start sidebar -->
-
     <div class="sidebar">
       <div class="sidebar-section">
         <div class="brand-name">Arya Tech</div>
@@ -124,6 +92,7 @@
                 </a>
               </ul>
             </li>
+
             <li class="sidebar-menu">
               <a href="table.html" class="d-flex align-center justify-between">
                 <span>
@@ -296,7 +265,7 @@
             <div class="header-msg center p5 fs14">
               پیــــام های دریـــــــافتی
             </div>
-            <ul class="event-ul-item p10 mt20">
+            <ul class="event-ul-item p10 mt20 mb20">
               <a href="#"><li>2222222</li></a>
               <a href="#"><li>111111111</li></a>
               <a href="#"><li>111111111</li></a>
@@ -304,7 +273,7 @@
               <a href="#"><li>111111111</li></a>
               <a href="#"><li>111111111</li></a>
               <a href="#"><li>111111111</li></a>
-              <a href="#"><li>111111111</li></a>
+              <a href="#"><li>4444444444</li></a>
             </ul>
             <div class="b-msg center p5 fs14">
               <a class="color" href="">نمایــــش همـــه</a>
@@ -392,95 +361,36 @@
     </div>
     <!-- end appbar -->
 
+    <br />
+    <br />
+    <br />
+    
     <!-- content -->
     <div class="content">
-      <div class="content-title">forms</div>
-      <br />
-      <!-- start page content -->
-      <div class="content-container">
-        <div class="insert">
-          <form action="">
-            <div class="inputs d-flex">
-              <div class="one">
-                <div class="label-form fs14 mb5" for="name">
-                  نام و تخلص <span class="color-red">*</span>
-                </div>
-                <input type="text" class="checkInput" />
-              </div>
+        <div class="content-title"> جزئیات  <?=$department['name']?></div>
+        <br />
+        <div class="box-container">
+            <div class="details">
+                <div class="detail-item d-flex">
+                    <div class="w100 m10 center">dfdfdfdf</div>
+                    <div class="w100 m10 center">3434</div>
+                </div>  
+            </div>
+            <div class="details">
+                <div class="detail-item d-flex">
+                    <div class="w100 m10 center">dfdfdfdf</div>
+                    <div class="w100 m10 center">3434</div>
+                </div>  
+            </div>
+            <div class="details">
+                <div class="detail-item d-flex">
+                    <div class="w100 m10 center">dfdfdfdf</div>
+                    <div class="w100 m10 center">3434</div>
+                </div>  
             </div>
 
-            <div class="inputs d-flex">
-              <div class="one">
-                <div class="label-form" for="name">شماره موبایل</div>
-                <input type="text" />
-              </div>
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-            </div>
-
-            <div class="inputs d-flex">
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-              <div class="one">
-                <div class="label-form" for="two">two</div>
-                <input type="text" />
-              </div>
-
-              <div class="one">
-                <div class="label-form" for="two">two</div>
-                <input type="text" />
-              </div>
-            </div>
-
-            <div class="inputs d-flex">
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-              <div class="one">
-                <div class="label-form" for="name">name</div>
-                <input type="text" />
-              </div>
-            </div>
-
-            <div class="inputs d-flex">
-              <div class="one">
-                <select name="select">
-                  <option selected disabled>please select item</option>
-                  <option value="item 1">item 1</option>
-                  <option value="item 2">item 2</option>
-                  <option value="item 3">item 3</option>
-                </select>
-              </div>
-              <div class="one">
-                <input type="text" />
-              </div>
-            </div>
-
-            <select name="select">
-              <option selected disabled>please select item</option>
-              <option value="item 1">item 1</option>
-              <option value="item 2">item 2</option>
-              <option value="item 3">item 3</option>
-            </select>
-
-            <input type="submit" id="submit" value="insert" class="btn" />
-          </form>
+            <!-- <a href="<?=url('departments')?>" class="color text-underline d-flex justify-center fs14">نمایش دیپارتمنت ها</a> -->
         </div>
-      </div>
-      <!-- end page content -->
     </div>
     <!-- end content -->
 

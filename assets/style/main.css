@@ -24,14 +24,8 @@
 
 
 /* genrals */
-.w17{
-    width: 17px;
-}
-.w14{
-    width: 14px;
-}
-.w20{
-    width: 20px;
+.text-underline{
+    text-decoration: underline;
 }
 .text-size{
     font-size: 14px;
@@ -66,7 +60,7 @@
     margin: 0 auto;
 }
 .box-container{
-    width: 100%;
+    width: 70%;
     background-color: var(--simillar);
     border-radius: 10px;
     padding: 20px;
@@ -78,12 +72,32 @@
     cursor: pointer;
 }
 
+
+/* widths */
+.w100{
+    width: 100%;
+}
+.w17{
+    width: 17px;
+}
+.w14{
+    width: 14px;
+}
+.w20{
+    width: 20px;
+}
+
+
+
 /* colors */
 .color{
     color: var(--text);
 }
 .text-white{
     color: white;
+}
+.color-red{
+    color: red;
 }
 
 /* fonts */

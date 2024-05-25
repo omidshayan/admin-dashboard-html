@@ -467,7 +467,6 @@ body.light-mode {
     font-size: 20px;
     font-weight: 500;
     margin-right: 20px;
-    margin-top: 80px;
 }
 
 /* input insert page */
@@ -534,7 +533,7 @@ body.light-mode {
 .label-form{
     text-align: right;
     margin-right: 10px;
-    
+
 }
 .btn{
     background-color: var(--bg) !important;
@@ -604,7 +603,13 @@ body.light-mode {
     background-color: var(--hover);
 }
 
-
+/* details */
+.details{
+    width: 90%;
+    height: auto;
+    border: 1px solid var(--border);
+    margin: 0 auto;
+}
 
 
 
@@ -764,5 +769,9 @@ body.light-mode {
     color: red;
     margin-top: 38px;
     font-size: 10px !important;
+}
+.border-error{
+    border: 1px solid red !important;
+    box-shadow: 0 0 8px red !important;
 }
 /* end auth */
