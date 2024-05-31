@@ -86,6 +86,9 @@
 .w20{
     width: 20px;
 }
+.w50{
+    width: 50px;
+}
 
 
 
@@ -142,6 +145,12 @@
 .mb5{
     margin-bottom: 5px;
 }
+.mb15{
+    margin-bottom: 15px;
+}
+.m-auto{
+    margin: 0 auto;
+}
 
 /* padding */
 .p20{
@@ -152,4 +161,14 @@
 }
 .p10{
     padding: 10px;
+}
+
+
+/* imgages */
+.br{
+    border: 1px solid var(--bg);
+    border-radius: 50%;
+}
+.bg{
+    background-color: var(--main);
 }

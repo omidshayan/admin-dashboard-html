@@ -607,7 +607,6 @@ body.light-mode {
 /* details */
 .details{
     width: 90%;
-    height: auto;
     border: 1px solid var(--border);
     margin: 0 auto;
 }
