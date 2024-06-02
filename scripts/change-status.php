@@ -4,7 +4,7 @@
             showLoadingOverlay()
             event.preventDefault();
             var id = $(this).data('id');
-            var url = '<?= url('change-status-center') ?>/' + id;
+            var url = $(this).data('url') + '/' + id;
             $.ajax({
                 url: url,
                 dataType: 'json',
