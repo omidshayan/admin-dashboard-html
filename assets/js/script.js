@@ -143,3 +143,42 @@ accor.forEach(item => {
         }
     })
 })
+
+
+// enable checkbox
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById("start");
+  const dateTimeInput = document.getElementById("time_start");
+
+  function toggleDateTimeInput() {
+    if (checkbox.checked) {
+      dateTimeInput.removeAttribute("disabled");
+      dateTimeInput.classList.remove("grayed-out");
+    } else {
+      dateTimeInput.setAttribute("disabled", "disabled");
+      dateTimeInput.classList.add("grayed-out");
+    }
+  }
+
+  toggleDateTimeInput();
+
+  checkbox.addEventListener("change", toggleDateTimeInput);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById("end");
+  const dateTimeInput = document.getElementById("time_end");
+
+  function toggleDateTimeInput() {
+    if (checkbox.checked) {
+      dateTimeInput.removeAttribute("disabled");
+      dateTimeInput.classList.remove("grayed-out");
+    } else {
+      dateTimeInput.setAttribute("disabled", "disabled");
+      dateTimeInput.classList.add("grayed-out");
+    }
+  }
+
+  toggleDateTimeInput();
+
+  checkbox.addEventListener("change", toggleDateTimeInput);
+});
