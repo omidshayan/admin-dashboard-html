@@ -1,39 +1,91 @@
 <span class="color btn p5 w100 m10 center" id="openModalBtn">لغو قرارداد</span>
 
 <form action="">
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="close">&times;</div>
-            <br>
-            <div class="cancel-text">
-                <textarea name="reason_cancel" class="content-area" placeholder="لطفا دلیل لغو را وارد نمایید"></textarea>
-            </div>
-            <input type="submit" class="color btn p5 w100 m10 center border-none border-hover" value="تایید" id="confirmBtn">
-            <button id="cancelBtn" class="btn-orange p5 w100 m10 center border-none border-hover">Cancel</button>
-        </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="close">&times;</div>
+      <br />
+      <div class="cancel-text">
+        <textarea
+          name="reason_cancel"
+          class="content-area"
+          placeholder="لطفا دلیل لغو را وارد نمایید"
+        ></textarea>
+      </div>
+      <input
+        type="submit"
+        class="color btn p5 w100 m10 center border-none border-hover"
+        value="تایید"
+        id="confirmBtn"
+      />
+      <button
+        id="cancelBtn"
+        class="btn-orange p5 w100 m10 center border-none border-hover"
+      >
+        Cancel
+      </button>
     </div>
-    
-    </form>
-    <script>
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("openModalBtn");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        document.getElementById("cancelBtn").onclick = function() {
-            modal.style.display = "none";
-        }
-        document.getElementById("confirmBtn").onclick = function() {
-            var email = document.getElementById("emailInput").value;
-            modal.style.display = "none";
-        }
-    </script>
+  </div>
+</form>
+
+
+<!-- tow modal -->
+<span id="showModalBtn">Show Infos</span>
+
+<div id="showInfosModal" class="modalInfo">
+    <div class="modal-content">
+        <span class="modalClose">&times;</span>
+        <br>
+        <br>
+        <?php
+        foreach ($cancel_infos as $cancel_info) { ?>
+            <h4><?=($cancel_info['type'] == 1) ? 'جزئیات لغو شدن' : 'جزئیات خارخ از لغو'?></h4>
+            <p>Date: </p>
+            <p>Author: </p>
+        <?php }
+        ?>
+
+    </div>
+</div>
+
+
+
+
+<script>
+  var modalInfo = document.getElementById("showInfosModal");
+  var btnInfo = document.getElementById("showModalBtn");
+  var closeModal = document.getElementsByClassName("modalClose")[0];
+  btnInfo.onclick = function () {
+    modalInfo.style.display = "block";
+  };
+  closeModal.onclick = function () {
+    modalInfo.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modalInfo) {
+      modalInfo.style.display = "none";
+    }
+  };
+
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModalBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  document.getElementById("cancelBtn").onclick = function () {
+    modal.style.display = "none";
+  };
+  document.getElementById("confirmBtn").onclick = function () {
+    var email = document.getElementById("emailInput").value;
+    modal.style.display = "none";
+  };
+</script>
