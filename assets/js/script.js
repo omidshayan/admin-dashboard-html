@@ -182,3 +182,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkbox.addEventListener("change", toggleDateTimeInput);
 });
+
+// start modals 
+var modalInfo = document.getElementById("showInfosModal");
+var btnInfo = document.getElementById("showModalBtn");
+var closeModal = document.getElementsByClassName("modalClose")[0];
+btnInfo.onclick = function () {
+  modalInfo.style.display = "block";
+};
+closeModal.onclick = function () {
+  modalInfo.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modalInfo) {
+    modalInfo.style.display = "none";
+  }
+};
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("openModalBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+span.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+document.getElementById("cancelBtn").onclick = function () {
+  modal.style.display = "none";
+};
+document.getElementById("confirmBtn").onclick = function () {
+  var email = document.getElementById("emailInput").value;
+  modal.style.display = "none";
+};
+// end modals
