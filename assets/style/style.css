@@ -713,6 +713,10 @@ body.light-mode {
     .appbar-search{
         display: none !important;
     }
+    .box-container{
+        width: 100% !important;
+        padding: 0 !important;
+    }
     .inputs{
         display: block !important;
     }
