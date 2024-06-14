@@ -13,9 +13,14 @@
     --text-light: #313131;
     --main-light: #f0f0f5;
     --main2-light: #dbdbdb;
+    --color-fixed: #313131;
 
-    --bg: #6A5FE8;
-    --hover: #5246dd;
+    --bg: #0369ad;
+    --hover: #005e9c;
+    --orange: #fc7d14;.btn-orange{
+    background-color: var(--orange);
+    cursor: pointer;
+}
     --border: #38475960;
     --shadow: rgba(0,0,0,0.54);
 }
@@ -255,9 +260,6 @@ body.light-mode {
     position: fixed;
     top: 325px;
 }
-.b-msg:hover{
-    text-decoration: underline;
-}
 .event-ul-item > a li{
     margin-top: 10px;
     padding: 8px;
@@ -493,6 +495,7 @@ body.light-mode {
     transition: 0.5s;
     outline: none;
     border: 1px solid var(--bg);
+    margin-bottom: 25px;
 }
 .insert select{
     background-color: var(--main);
@@ -505,7 +508,6 @@ body.light-mode {
     font-size: 16px;
     outline: none;
     border: 1px solid var(--bg);
-    margin-bottom: 25px;
 }
 .insert select option{
     font-size: 16px;
@@ -516,7 +518,7 @@ body.light-mode {
     box-shadow: 0 0 8px var(--hover);
     transition: 0.5s;
   }
-.inputs{
+  .inputs{
     width: 90%;
     margin: 20px auto !important;
 }
@@ -525,8 +527,21 @@ body.light-mode {
 }
 .one > input{
     width: 99%;
-    margin-bottom:5px;
-
+    margin-bottom: 0 !important;
+}
+.one > textarea{
+    width: 99%;
+    margin-bottom: 0 !important;
+    background-color: var(--main);
+    border: 1px solid var(--bg);
+    height: 100px;
+    color: var(--text);
+    padding: 7px;
+    font-size: 16px !important;
+}
+.max-width{
+    max-width: 370px;
+    min-width: 370px;
 }
 .one > select{
     width: 99%;
@@ -534,20 +549,10 @@ body.light-mode {
 .label-form{
     text-align: right;
     margin-right: 10px;
-
 }
-.btn{
-    background-color: var(--bg) !important;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--text) !important;
-    margin-top: 40px;
-    transition: all .3s ease-in;
+.img{
+    width: 120px !important;
 }
-.btn:hover{
-    background-color: var(--main) !important;    
-}
-
 /* table page */
 .fl-table {
     border-radius: 5px;
@@ -607,47 +612,12 @@ body.light-mode {
 /* details */
 .details{
     width: 90%;
+    height: auto;
     border: 1px solid var(--border);
     margin: 0 auto;
 }
 
-/* collapse */
-  .accordion{
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px auto;
-    background-color: var(--simillar);
-  }
-  .accordion div:not(:last-child){
-     border-bottom: 1px solid var(--border);
-  }
-  .accordion > div button{
-    background-color: var(--main);
-      border: none;
-      outline: none;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    transition: 100ms ease;
-      width: 100%;
-    padding:10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--text);
-  }
-  .accordion > div button i{
-    transition: 200ms ease;
-  }
-  .accordion > div{
-    overflow: hidden;
-    transition: 300ms ease;
-  }
-  .accordion > div p{
-    margin: 10px;
-    font-size: 18px;
-  }
-
-  /* accourdion */
+/* accourdion */
 .accordion-title{
     background: var(--main);
     font-size: 16px;
@@ -674,6 +644,23 @@ body.light-mode {
     width: 100%;
 }
 
+
+
+
+/* single btn */
+.single-btn{
+    color: var(--text);
+    background-color: var(--bg);
+    border-radius: 5px;
+    padding: 7px 11px;
+    margin: 0 auto !important;
+    border: 1px solid var(--bg);
+    transition: 0.3s;
+}
+.single-btn:hover{
+    background-color: var(--main);
+    border: 1px solid var(--bg);
+}
 
 
 
@@ -725,6 +712,8 @@ body.light-mode {
         display: block !important;
     }
 }
+
+
 
 
 /* login & register */
@@ -839,6 +828,125 @@ body.light-mode {
 }
 /* end auth */
 
+/* sweetAlert */
+div:where(.swal2-container) div:where(.swal2-popup){
+    background-color: var(--simillar) !important;
+}
+.swal2-title {
+    color: #b6b6b6;
+}
+.swal2-html-container{
+    color: #b6b6b6 !important;
+}
+/* my alert */
+.alert {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* عرض مورد نظر */
+    background-color: rgb(194, 39, 0);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: bottom 0.5s ease-in-out;
+    border-radius: 7px;
+}
+.alert.success {
+    background-color: green;
+}
+.time-title {
+    margin-bottom: 14px;
+    display: flex;
+    color: var(--bg);
+}
+
+.time-change {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.ral {
+    position: relative !important;
+    text-align: right !important;
+}
+
+.checkbox {
+    position: absolute;
+    bottom: -6px;
+    width: 13px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important
+}
+.checkbox:focus {
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+}
+.checkbox-age {
+    width: 13px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important
+}
+.checkbox-age:focus {
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+}
+.custom-input[disabled] {
+    color: #999; /* رنگ مورد نظر برای حالت غیرفعال */
+}
+.grayed-out {
+    opacity: 0.4;
+}
+/* start loading */
+.loader {
+    margin-top: 45px !important;
+    margin-bottom: 25px !important;
+    width: 30px;
+    --b: 5px; 
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%,var(--bg)) content-box;
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+            mask-composite: intersect;
+    animation:l4 1s infinite steps(10);
+  }
+  @keyframes l4 {to{transform: rotate(1turn)}}
+.a-spiner{
+    margin: 20px auto 0 auto;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); 
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* end loading */
 
 /* modals */
 .modalInfo {
