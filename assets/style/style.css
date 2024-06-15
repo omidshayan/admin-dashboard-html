@@ -2,7 +2,6 @@
     font-family: 'vazir';
     src: url('../font/Vazir.ttf');
 }
-
 :root{
     --main: #1D1E26;
     --simillar: #262932;
@@ -461,7 +460,6 @@ body.light-mode {
     font-size: 18px;
 }
 
-
 /* main content title evry pages */
 .content-title{
     width: 100%;
@@ -721,9 +719,6 @@ body.light-mode {
         display: block !important;
     }
 }
-
-
-
 
 /* login & register */
 .login {
