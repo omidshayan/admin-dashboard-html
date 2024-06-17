@@ -2,11 +2,13 @@
     font-family: 'vazir';
     src: url('../font/Vazir.ttf');
 }
+
 :root{
     --main: #1D1E26;
     --simillar: #262932;
     --text: #bebebe;
     --main2: #16171d;
+    --btn-text: #f7f7f7;
     
     --simillar-light: #ffffff;
     --text-light: #313131;
@@ -14,8 +16,8 @@
     --main2-light: #dbdbdb;
     --color-fixed: #313131;
 
-    --bg: #0369ad;
-    --hover: #005e9c;
+    --bg: #0292f1;
+    --hover: #18a3ff;
     --orange: #fc7d14;.btn-orange{
     background-color: var(--orange);
     cursor: pointer;
@@ -57,7 +59,7 @@ body.light-mode {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
-    z-index: 5;
+    z-index: 3;
 }
 .sidebar{
     width: 280px;
@@ -69,7 +71,7 @@ body.light-mode {
     bottom: 0;
     transition: all 0.5s;
     transform: translateX(0);
-    z-index: 9;
+    z-index: 3;
 }
 .sidebar.active{
     transform: translateX(100%);
@@ -192,6 +194,7 @@ body.light-mode {
     position: fixed;
     width: calc(100% - 285px);
     background-color: var(--main);
+    z-index: 2;
 }
 .appbar.active{
     margin-right: 0;
@@ -335,11 +338,12 @@ body.light-mode {
     width: 250px;
     height: 100vh;
     background-color: var(--simillar);
-    position: absolute;
+    position: fixed;
     left: -260px;
     top: 0;
     transition: 0.4s;
     padding: 10px !important;
+    z-index: 5;
 }
 .mode{
     display: flex;
@@ -366,7 +370,8 @@ body.light-mode {
 #left-menu-active.left-menu-active{
     opacity: 1;
     visibility: visible;
-    z-index: 0;
+    position: fixed;
+    z-index: 4;
 }
 .ml-50{
     margin-left: 50px;
@@ -460,6 +465,7 @@ body.light-mode {
     font-size: 18px;
 }
 
+
 /* main content title evry pages */
 .content-title{
     width: 100%;
@@ -519,6 +525,7 @@ body.light-mode {
   .inputs{
     width: 90%;
     margin: 20px auto !important;
+    position: relative;
 }
 .one{
     width: 100% !important;
@@ -563,6 +570,9 @@ body.light-mode {
     white-space: nowrap;
     background-color: var(--simillar);
 }
+.fl-table th{
+    color: var(--btn-text);
+}
 .fl-table td, .fl-table th {
     text-align: center;
     padding: 8px;
@@ -584,7 +594,14 @@ body.light-mode {
 .fl-table tr:hover{
     background-color: rgba(106, 95, 232, 0.171);
 }
-
+.paginate-section{
+    padding: 4px;
+    position: relative;
+}
+.table-info{
+    position: absolute;
+    right: 10px;
+}
 /* paginations */
 .demo {
     position: fixed;
@@ -665,60 +682,21 @@ body.light-mode {
     border: 1px solid var(--bg);
 }
 
+/* help */
+.help{
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1200px) {
-    .report .report-item{
-        width: calc(50% - 20px);
-        margin-top: 20px;
-    }
 }
-@media  screen and (max-width : 992px) {
-    .sidebar{
-        transform: translateX(100%);
-        right: 0;
-}
-.content{
-    margin-right: 0;
-}
-.appbar{
-    margin-right: 0;
-    width: 100% ;
-}
-.sidebar.active{
-    transform: translateX(0%);
-}
-#menu-toggle.active{
-    opacity: 1;
-    visibility: visible;
-}
-}
-@media screen  and (max-width: 576px){
-    .report .report-item{
-        width: 100%;
-    }
+.modal-content-help{
+    background-color: var(--main);
+    margin: 15% auto;
+    padding: 6px 10px 10px 10px;
+    border: 1px solid var(--border);
+    width: 38%;
 }
 
-/* appbar */
-@media screen and (max-width: 770px) {
-    .appbar-search{
-        display: none !important;
-    }
-    .box-container{
-        width: 100% !important;
-        padding: 0 !important;
-    }
-    .inputs{
-        display: block !important;
-    }
-}
+
+
+
 
 /* login & register */
 .login {
@@ -906,6 +884,11 @@ div:where(.swal2-container) div:where(.swal2-popup){
 .grayed-out {
     opacity: 0.4;
 }
+.checkSelectErr{
+    right: 5px;
+    position: absolute;
+    top: 38px;
+}
 /* start loading */
 .loader {
     margin-top: 45px !important;
@@ -937,6 +920,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 7;
 }
 .spinner {
     border: 4px solid rgba(255, 255, 255, 0.3); 
@@ -964,7 +948,6 @@ div:where(.swal2-container) div:where(.swal2-popup){
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
   }
-  
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -972,21 +955,18 @@ div:where(.swal2-container) div:where(.swal2-popup){
     border: 1px solid #888;
     width: 80%;
   }
-  
   .modalClose {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
-  
   .modalClose:hover,
   .modalClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
-
 .modal {
     display: none;
     position: fixed;
@@ -1028,3 +1008,89 @@ div:where(.swal2-container) div:where(.swal2-popup){
     color: var(--text);
     font-size: 14px;
 }
+
+
+/* pagination */
+.page-item > a{
+    color: var(--text);
+    margin: 2px;
+    padding: 2px 7px;
+    background-color: var(--main);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.page-item > a:hover{
+    color: var(--main);
+    background-color: var(--orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .report .report-item{
+        width: calc(50% - 20px);
+        margin-top: 20px;
+    }
+}
+@media  screen and (max-width : 992px) {
+    .sidebar{
+        transform: translateX(100%);
+        right: 0;
+}
+.content{
+    margin-right: 0;
+}
+.appbar{
+    margin-right: 0;
+    width: 100% ;
+}
+.sidebar.active{
+    transform: translateX(0%);
+}
+#menu-toggle.active{
+    opacity: 1;
+    visibility: visible;
+}
+}
+@media screen  and (max-width: 576px){
+    .report .report-item{
+        width: 100%;
+    }
+    .table-info{
+        position: sticky !important;
+        width: 100% !important;
+        font-size: 12px !important;
+    }
+}
+
+/* appbar */
+@media screen and (max-width: 770px) {
+    .appbar-search{
+        display: none !important;
+    }
+    .box-container{
+        width: 100% !important;
+        padding: 20px !important;
+    }
+    .inputs{
+        display: block !important;
+    }
+    .modal-content-help{
+        width: 90%;
+    }
+    .modal-content{
+        width: 90%;
+    }
+}
+
+
