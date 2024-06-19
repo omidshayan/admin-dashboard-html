@@ -878,6 +878,44 @@ div:where(.swal2-container) div:where(.swal2-popup){
     margin: 0 !important;
     outline: none !important;
 }
+/* ///////////////// */
+.custom-checkbox {
+    position: relative;
+}
+
+.hidden-checkbox {
+    position: absolute;
+}
+.checkbox-button {
+    width: 20px; /* عرض دکمه */
+    height: 20px; /* ارتفاع دکمه */
+    background-color: #fff; /* بک‌گراند دکمه */
+    border: none; /* بوردر دکمه */
+    cursor: pointer; /* نشانگر موس */
+}
+
+.checkbox-button:focus {
+    outline: none; /* حذف اطرافیان روشنی هنگام انتخاب دکمه */
+}
+
+.checkbox-button::before {
+    content: ''; /* ایجاد یک بوکس چک‌باکس داخل دکمه */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* رنگ بوکس چک‌باکس */
+    opacity: 0; /* بدون نمایش اولیه */
+}
+
+.hidden-checkbox:checked + .checkbox-button::before {
+    opacity: 1; /* نمایش بوکس چک‌باکس هنگامی که input چک شد */
+}
+
+
+
+
+
+
 .custom-input[disabled] {
     color: #999; /* رنگ مورد نظر برای حالت غیرفعال */
 }
@@ -887,7 +925,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
 .checkSelectErr{
     right: 5px;
     position: absolute;
-    top: 38px;
+    top: 64px;
 }
 /* start loading */
 .loader {
@@ -970,14 +1008,14 @@ div:where(.swal2-container) div:where(.swal2-popup){
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 6;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.596);
     text-align: center;
   }
   .modal-content {
