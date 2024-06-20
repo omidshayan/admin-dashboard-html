@@ -643,6 +643,7 @@ body.light-mode {
     transition: 0.3s;
     width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 .accordion-title:hover{
     background: var(--hover);
@@ -878,46 +879,24 @@ div:where(.swal2-container) div:where(.swal2-popup){
     margin: 0 !important;
     outline: none !important;
 }
-/* ///////////////// */
-.custom-checkbox {
-    position: relative;
-}
-
-.hidden-checkbox {
+.checkbox-permissoin{
     position: absolute;
+    right: 5px;
+    width: 24px !important;
+    height: 24px !important;
 }
-.checkbox-button {
-    width: 20px; /* عرض دکمه */
-    height: 20px; /* ارتفاع دکمه */
-    background-color: #fff; /* بک‌گراند دکمه */
-    border: none; /* بوردر دکمه */
-    cursor: pointer; /* نشانگر موس */
+.checkbox-permissoin:checked {
+    background-color: #009688;
+    color: rgb(245, 8, 8);
 }
-
-.checkbox-button:focus {
-    outline: none; /* حذف اطرافیان روشنی هنگام انتخاب دکمه */
-}
-
-.checkbox-button::before {
-    content: ''; /* ایجاد یک بوکس چک‌باکس داخل دکمه */
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* رنگ بوکس چک‌باکس */
-    opacity: 0; /* بدون نمایش اولیه */
-}
-
-.hidden-checkbox:checked + .checkbox-button::before {
-    opacity: 1; /* نمایش بوکس چک‌باکس هنگامی که input چک شد */
-}
-
-
-
-
-
-
 .custom-input[disabled] {
-    color: #999; /* رنگ مورد نظر برای حالت غیرفعال */
+    color: #999;
+}
+.check-child{
+    width: 80%;
+    padding: 5px;
+    margin-right: 20px;
+    margin: 0 auto;
 }
 .grayed-out {
     opacity: 0.4;
@@ -1062,9 +1041,6 @@ div:where(.swal2-container) div:where(.swal2-popup){
     color: var(--main);
     background-color: var(--orange);
 }
-
-
-
 
 
 
