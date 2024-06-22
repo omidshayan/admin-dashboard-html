@@ -16,8 +16,8 @@
     --main2-light: #dbdbdb;
     --color-fixed: #313131;
 
-    --bg: #0292f1;
-    --hover: #18a3ff;
+    --bg: #5e02f1;
+    --hover: #4f06c5;
     --orange: #fc7d14;.btn-orange{
     background-color: var(--orange);
     cursor: pointer;
