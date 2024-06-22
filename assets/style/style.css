@@ -425,6 +425,11 @@ body.light-mode {
   .slider:before {
     transition: transform 0.4s;
   }  
+  .password-toggle{
+    position: absolute;
+    left: 10px;
+    top: 35px;
+  }
 /* end appbar */
 
 .report{
