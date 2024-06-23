@@ -1048,7 +1048,20 @@ div:where(.swal2-container) div:where(.swal2-popup){
 }
 
 
+/* detailes page */
+.detailes-culomn{
+    margin: 5px auto;
+    width: 96%;
+    height: auto;
+    background-color: var(--simillar);
+    justify-content: space-between;
+    padding: 3px 10px;
+    transition: 0.3s;
+}
+.detailes-culomn:hover{
+    background-color: var(--border);
 
+}
 
 
 
