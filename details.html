@@ -377,10 +377,17 @@
               <div class="title-detaile">name: </div>
               <div class="info-detaile">omid shayan</div>
             </div>
-            <div class="detailes-page d-flex cursor-p">
+            <div class="detailes-culomn d-flex cursor-p">
               <div class="title-detaile">name: </div>
               <div class="info-detaile">omid shayan</div>
             </div>
+            <div class="detailes-culomn d-flex align-center cursor-p">
+              <div class="title-detaile">رمزعبور: </div>
+              <div class="info-detaile" id="passwordDisplay">123456</div>
+              <div class="eye-icon" onmousedown="showPassword()" onmouseup="hidePassword()">
+                  <span id="eyeIcon" style="font-size: 18px;">&#128065;</span>
+              </div>
+          </div>
           </div>
         </div>
 
@@ -388,7 +395,25 @@
       </div>
     </div>
     <!-- end content -->
-
+    <script>
+      var passwordField = document.getElementById('passwordDisplay');
+      var eyeIcon = document.getElementById('eyeIcon');
+      var isMouseDown = false;
+  
+      function showPassword() {
+          passwordField.innerHTML = '123456';
+          eyeIcon.innerHTML = '&#128064;';
+          isMouseDown = true;
+      }
+  
+      function hidePassword() {
+          if (isMouseDown) {
+              passwordField.innerHTML = '<?= str_repeat('*', strlen(123456)) ?>';
+              eyeIcon.innerHTML = '&#128065;';
+              isMouseDown = false;
+          }
+      }
+  </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
