@@ -1056,57 +1056,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
     background-color: var(--border);
 
 }
-/* live search back */
-.search-back{
-    width: 99%;
-    height: auto;
-    max-height: 380px;
-    background-color: var(--main);
-    position: absolute;
-    top: 65px;
-    border-radius: 10px;
-    overflow-y: auto;
-    transition: 0.9s;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-    border-top: none;
-    z-index: 2;
-    text-align: center;
-}
-.search-item{
-    text-align: right !important;
-}
-.search-back {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-}
-.search-item {
-    padding: 7px 10px;
-    cursor: pointer;
-}
-.search-item:hover {
-    background-color: var(--border);
-}
-.selected {
-    background-color: var(--border);
-}
-::-webkit-scrollbar {
-    width: 5px; 
-}
-::-webkit-scrollbar-track {
-    background-color: var(--simillar); 
-}
-::-webkit-scrollbar-thumb {
-    background-color: #888; 
-    border-radius: 4px; 
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+
 
 
 
