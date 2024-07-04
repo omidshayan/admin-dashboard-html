@@ -558,6 +558,10 @@ body.light-mode {
 .img{
     width: 120px !important;
 }
+.option{
+    font-size: 25px !important;
+}
+
 /* table page */
 .fl-table {
     border-radius: 5px;
