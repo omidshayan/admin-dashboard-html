@@ -1061,7 +1061,44 @@ div:where(.swal2-container) div:where(.swal2-popup){
 
 }
 
+/* select btn inupts */
+.payment-options{
+    width: 60%;
+    height: 100px;
+    background-color: greenyellow;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
 
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .button.selected {
+    opacity: 1;
+  }
+  .button.receipt {
+    background-color: blue;
+    color: white;
+  }
+  .button.withdrawal {
+    background-color: red;
+    color: white;
+  }
+  
+  .button.receipt:hover {
+    background-color: darkblue;
+  }
+  
+  .button.withdrawal:hover {
+    background-color: darkred;
+  }
 
 
 

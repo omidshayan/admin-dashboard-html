@@ -367,7 +367,6 @@
 
     <!-- content -->
     <div class="content">
-      <span class="color btn p5 w100 m10 center" id="openModalBtn">bottom</span>
       <form action="">
         <div id="myModal" class="modal">
           <div class="modal-content">
@@ -415,9 +414,34 @@
         </div>
       </div>
 
-      <script>
-       
-      </script>
+
+      <div class="payment-options">
+        <label for="receipt">
+            <input type="radio" style="opacity: 0;" id="receipt" name="receipt" value="receipt" onclick="selectPayment('receipt')">
+            <span class="button" id="receiptButton">رسید</span>
+        </label>
+        <label for="withdrawal">
+            <input type="radio" style="opacity: 0;" id="withdrawal" name="withdrawal" value="withdrawal" onclick="selectPayment('withdrawal')">
+            <span class="button" id="withdrawalButton">برداشت</span>
+        </label>
+    </div>
+
+    
+    <script>
+        function selectPayment(paymentType) {
+            var receiptButton = document.getElementById('receiptButton');
+            var withdrawalButton = document.getElementById('withdrawalButton');
+
+            if (paymentType === 'receipt') {
+                receiptButton.classList.add('selected', 'receipt');
+                withdrawalButton.classList.remove('selected', 'withdrawal');
+            } else if (paymentType === 'withdrawal') {
+                receiptButton.classList.remove('selected', 'receipt');
+                withdrawalButton.classList.add('selected', 'withdrawal');
+            }
+        }
+    </script>
+
     </div>
     <!-- end content -->
 
