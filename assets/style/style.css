@@ -1107,7 +1107,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
 
 
 
-@media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     .report .report-item{
         width: calc(50% - 20px);
         margin-top: 20px;
@@ -1149,6 +1149,9 @@ div:where(.swal2-container) div:where(.swal2-popup){
     .appbar-search{
         display: none !important;
     }
+    .content-container{
+        width: 100% !important;
+    }
     .box-container{
         width: 100% !important;
         padding: 20px !important;
@@ -1163,5 +1166,3 @@ div:where(.swal2-container) div:where(.swal2-popup){
         width: 90%;
     }
 }
-
-
