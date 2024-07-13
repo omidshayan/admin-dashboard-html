@@ -160,6 +160,7 @@ body.light-mode {
     margin-right: 285px;
     padding: 2rem 1.2rem 2rem 1rem;
     transition: all 0.5s;
+    overflow: hidden !important;
 }
 .content.active{
     margin-right: 0;
@@ -558,10 +559,6 @@ body.light-mode {
 .img{
     width: 120px !important;
 }
-.option{
-    font-size: 25px !important;
-}
-
 /* table page */
 .fl-table {
     border-radius: 5px;
@@ -688,9 +685,6 @@ body.light-mode {
 }
 
 /* help */
-.help{
-
-}
 .modal-content-help{
     background-color: var(--main);
     margin: 15% auto;
@@ -961,7 +955,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
 .modalInfo {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 6;
     left: 0;
     top: 0;
     width: 100%;
@@ -1058,48 +1052,14 @@ div:where(.swal2-container) div:where(.swal2-popup){
 }
 .detailes-culomn:hover{
     background-color: var(--border);
-
+}
+.label-term{
+    text-align: center !important;
+}
+.radio-term{
+    height: 20px !important;
 }
 
-/* select btn inupts */
-.payment-options{
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    display: flex;
-    justify-content: space-evenly;
-}
-.input-btn{
-    width: 0 !important;
-}
-.button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #ccc;
-    color: #333;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-  }
-  .button.selected {
-    opacity: 1;
-  }
-  .button.receipt {
-    background-color: blue;
-    color: white;
-  }
-  .button.withdrawal {
-    background-color: red;
-    color: white;
-  }
-  
-  .button.receipt:hover {
-    background-color: #0101ee;
-  }
-  
-  .button.withdrawal:hover {
-    background-color: #e70202;
-  }
 
 
 
@@ -1107,7 +1067,7 @@ div:where(.swal2-container) div:where(.swal2-popup){
 
 
 
-  @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .report .report-item{
         width: calc(50% - 20px);
         margin-top: 20px;
@@ -1166,3 +1126,5 @@ div:where(.swal2-container) div:where(.swal2-popup){
         width: 90%;
     }
 }
+
+
