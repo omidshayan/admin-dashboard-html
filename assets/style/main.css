@@ -53,6 +53,9 @@
 .center{
     text-align: center !important;
 }
+.float-right{
+    float: right;
+}
 
 .content-container{
     width: 100%;
@@ -137,7 +140,9 @@
 .fs18{
     font-size: 18px;
 }
-
+.fs22{
+    font-size: 22px;
+}
 
 
 
@@ -238,10 +243,12 @@
     color: var(--text) !important;  
     border: 1px solid var(--orange);
 }
-
+.btn-close:hover{   
+    color: red;
+}
 .border-none{
     border: none;
-    border: 1px solid var(--main);
+    border: 1px solid var(--simillar);
 }
 .border-hover:hover{
     border: 1px solid var(--bg);

@@ -1005,11 +1005,10 @@ div:where(.swal2-container) div:where(.swal2-popup){
   .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
   }
-  .close:hover,
-  .close:focus {
+  .close:hover {
     color: red;
     text-decoration: none;
     cursor: pointer;
