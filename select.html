@@ -102,6 +102,15 @@
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+.omid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.omid .sidebar-arrow{
+    transition: 0.3s;
+}
+
     </style>
   </head>
 
@@ -603,7 +612,23 @@
             </div>
             <div class="accordion-item-select">
               <input type="checkbox" name="all tow" id="accordion-2-main-select" class="main-checkbox-select">
-            <label for="accordion-2" class="accordion-button-select">Item 2</label>
+            <label for="accordion-2" class="accordion-button-select omid">
+              <span>
+                Item 2 
+              </span>
+              <span>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="w14 sidebar-arrow"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                />
+              </svg>
+              </span>
+            </label>
             <div class="accordion-content-select">
                 <label class="checkbox-container"><input type="checkbox" name="omid 1" class="inner-checkbox-select" data-parent="accordion-2-main-select"><span class="checkmark"></span> Checkbox 2.1</label>
                 <label class="checkbox-container"><input type="checkbox" name="omid 2" class="inner-checkbox-select" data-parent="accordion-2-main-select"><span class="checkmark"></span> Checkbox 2.2</label>

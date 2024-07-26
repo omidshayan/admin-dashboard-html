@@ -1063,9 +1063,6 @@ div:where(.swal2-container) div:where(.swal2-popup){
 
 
 
-
-
-
 @media screen and (max-width: 1200px) {
     .report .report-item{
         width: calc(50% - 20px);
