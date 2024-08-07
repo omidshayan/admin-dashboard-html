@@ -691,7 +691,6 @@
           top: 4px;
           animation-duration: 1s;
         }
-        
         .loaderc::before {
           position: absolute;
           width: 0px;
@@ -704,7 +703,6 @@
           top: 4px;
           animation-duration: 40s;
         }
-        
         .loaderc::before,.loaderc::after {
           transform-origin: bottom;
           animation-name: dial;
