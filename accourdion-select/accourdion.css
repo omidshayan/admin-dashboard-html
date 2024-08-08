@@ -1,0 +1,103 @@
+.accordion-select {
+    width: 100% !important;
+    margin: 6px auto 20px auto !important;
+    direction: rtl;
+}
+
+.accordion-item-select {
+    border-radius: 5px;
+    border: 1px solid var(--hover);
+    margin: 5px 0 !important;
+}
+
+.accordion-button-select {
+    border-radius: 5px;
+    background-color: var(--main);
+    border: none;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    position: relative;
+    transition: 0.4s;
+}
+.accordion-button-select:hover {
+    background-color: var(--hover);
+}
+.accordion-button-select::before {
+    content: none;
+}
+.accordion-content-select {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-right: 10px;
+}
+.accordion-content-select.open {
+    max-height: 500px;
+    text-align: center !important;
+}
+.accordion-content-select label {
+    display: block;
+    margin: 10px 0; 
+    padding-right: 30px;
+}
+.main-checkbox-select {
+    display: none;
+}
+
+.checkbox-container {
+    display: flex !important;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 20px !important;
+    width: 20px !important;
+    background-color: #ccc !important;
+    border-radius: 50% !important;
+    transform: translateY(-50%);
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--bg) !important;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    right: 7px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.omid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.omid .sidebar-arrow{
+    transition: 0.3s;
+}
