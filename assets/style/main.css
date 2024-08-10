@@ -74,7 +74,7 @@
     padding: 20px;
     border: 1px solid var(--border);
     max-width: 1450px;
-    margin: 20px auto 40px auto;
+    margin: 100px auto 40px auto;
     overflow-x: auto;
 }
 .box-container::-webkit-scrollbar {
