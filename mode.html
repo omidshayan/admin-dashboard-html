@@ -1,71 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-    --main: #1D1E26;
-    --similar-dark: #262932;
-    --similar-light: #f2f2f2;
-    --text: #bebebe;
-    --bg: #6A5FE8;
-    --hover: #5246dd;
-    --border: #384759;
-    --shadow: rgba(0,0,0,0.54);
-    --main-light: #bebebe;
-}
-
-body {
-    direction: rtl;
-    overflow-x: hidden;
-    font-family: 'shabnam';
-    background: var(--main);
-    color: var(--text);
-    font-family: "vazir";
-}
-
-.dashboard {
-    padding: 20px;
-    background-color: var(--bg);
-    color: var(--text);
-    border: 1px solid var(--border);
-    box-shadow: 0px 0px 10px var(--shadow);
-}
-
-/* حالت تاریک */
-body.dark-mode {
-    --similar: var(--similar-dark);
-    background-color: var(--similar-dark);
-    color: var(--text);
-}
-
-/* حالت روشن */
-body.light-mode {
-    --similar: var(--similar-light);
-    background-color: var(--similar-light);
-    color: var(--main);
-}
-
-    </style>
-    <script>
-        function toggleDarkMode() {
-    var body = document.body;
-    body.classList.toggle("dark-mode");
-}
-
-    </script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="dashboard">
-        <h1>داشبورد ادمین</h1>
-        <p>این یک داشبورد ادمین است.</p>
-        <button onclick="toggleDarkMode()">تغییر حالت</button>
+      <h1>داشبورد ادمین</h1>
+      <p>این یک داشبورد ادمین است.</p>
+      <button onclick="toggleDarkMode()">تغییر حالت</button>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
