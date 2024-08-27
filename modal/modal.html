@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/main.css" />
     <title>آریا تکنالوژی هرات</title>
   </head>
 
@@ -461,24 +461,10 @@
         </label>
       </div>
 
-      <script>
-        function selectPayment(paymentType) {
-          var receiptButton = document.getElementById("receiptButton");
-          var withdrawalButton = document.getElementById("withdrawalButton");
-
-          if (paymentType === "receipt") {
-            receiptButton.classList.add("selected", "receipt");
-            withdrawalButton.classList.remove("selected", "withdrawal");
-          } else if (paymentType === "withdrawal") {
-            receiptButton.classList.remove("selected", "receipt");
-            withdrawalButton.classList.add("selected", "withdrawal");
-          }
-        }
-      </script>
     </div>
     <!-- end content -->
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>
