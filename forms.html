@@ -10,9 +10,6 @@
   </head>
 
   <body>
-    <input type="text" id="menu-toggle" />
-    <input type="text" id="left-menu-active" />
-
     <script>
       $(document).ready(function () {
         function checkInputError(input) {
@@ -43,6 +40,10 @@
         });
       });
     </script>
+
+    <input type="text" id="menu-toggle" />
+    <input type="text" id="left-menu-active" />
+
     <!-- start sidebar -->
     <div class="sidebar">
       <div class="sidebar-section">
@@ -237,7 +238,10 @@
             </li>
 
             <li class="sidebar-menu">
-              <a href="modal.html" class="d-flex align-center justify-between">
+              <a
+                href="modal/modal.html"
+                class="d-flex align-center justify-between"
+              >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -413,7 +417,7 @@
       </div>
     </div>
     <!-- end sidebar -->
-     
+
     <div class="sidebar">
       <div class="sidebar-section">
         <div class="brand-name">Arya Tech</div>
