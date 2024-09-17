@@ -1,24 +1,29 @@
-$(document).ready(function() {
-    var prevInputValue = '';
-    $('#select_item').change(function() {
-        var currencyId = $(this).val();
-        console.log(currencyId);
-        if (currencyId !== prevInputValue) {
-            prevInputValue = currencyId;
-            if (currencyId != "") {
-                $.post("get-currency-price", {
-                    id: currencyId
-                }, function(response) {
-                    if (response.currency_price) {
-                        $('#currency_price').val(response.currency_price);
-                    } else {
-                        console.error('Error: ' + response.error);
-                    }
-                }, "json").fail(function(xhr, status, error) {
-                    console.error('Error: ' + status + ' - ' + error);
-                    console.error(xhr.responseText);
-                });
+$(document).ready(function () {
+  var prevInputValue = "";
+  $("#select_item").change(function () {
+    var currencyId = $(this).val();
+    console.log(currencyId);
+    if (currencyId !== prevInputValue) {
+      prevInputValue = currencyId;
+      if (currencyId != "") {
+        $.post(
+          "get-currency-price",
+          {
+            id: currencyId,
+          },
+          function (response) {
+            if (response.currency_price) {
+              $("#currency_price").val(response.currency_price);
+            } else {
+              console.error("Error: " + response.error);
             }
-        }
-    });
+          },
+          "json"
+        ).fail(function (xhr, status, error) {
+          console.error("Error: " + status + " - " + error);
+          console.error(xhr.responseText);
+        });
+      }
+    }
+  });
 });
