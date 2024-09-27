@@ -5,37 +5,37 @@
             e.preventDefault();
 
             // check inputs
-                function checkInputError(input) {
-                    let value = $(input).val().trim();
-                    if (value === "") {
-                        $(input).addClass('border-error');
-                    } else {
-                        $(input).removeClass('border-error');
-                    }
+            function checkInputError(input) {
+                let value = $(input).val().trim();
+                if (value === "") {
+                    $(input).addClass('border-error');
+                } else {
+                    $(input).removeClass('border-error');
                 }
-                $(".checkInput").on("input", function() {
-                    checkInputError(this);
-                });
-                $("#submit").click(function(e) {
-                    let inputs = $(".checkInput");
-                    let emptyInputs = [];
+            }
+            $(".checkInput").on("input", function() {
+                checkInputError(this);
+            });
+            $("#submit").click(function(e) {
+                let inputs = $(".checkInput");
+                let emptyInputs = [];
 
-                    inputs.each(function() {
-                        checkInputError(this);
-                        if ($(this).val().trim() === "") {
-                            emptyInputs.push(this);
-                        }
-                    });
-                    if (emptyInputs.length > 0) {
-                        e.preventDefault();
-                        $(emptyInputs[0]).focus();
+                inputs.each(function() {
+                    checkInputError(this);
+                    if ($(this).val().trim() === "") {
+                        emptyInputs.push(this);
                     }
                 });
-                // end chack inputs
+                if (emptyInputs.length > 0) {
+                    e.preventDefault();
+                    $(emptyInputs[0]).focus();
+                }
+            });
+            // end chack inputs
 
 
-           
-           
+
+
 
             $("#spiner").show();
             $("#submit").hide();

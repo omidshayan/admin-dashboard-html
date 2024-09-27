@@ -1,41 +1,41 @@
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // add new buy product
-        $("#submitForm").submit(function(e) {
+        $("#submitForm").submit(function (e) {
             e.preventDefault();
 
             // check inputs
-                function checkInputError(input) {
-                    let value = $(input).val().trim();
-                    if (value === "") {
-                        $(input).addClass('border-error');
-                    } else {
-                        $(input).removeClass('border-error');
-                    }
+            function checkInputError(input) {
+                let value = $(input).val().trim();
+                if (value === "") {
+                    $(input).addClass('border-error');
+                } else {
+                    $(input).removeClass('border-error');
                 }
-                $(".checkInput").on("input", function() {
-                    checkInputError(this);
-                });
-                $("#submit").click(function(e) {
-                    let inputs = $(".checkInput");
-                    let emptyInputs = [];
+            }
+            $(".checkInput").on("input", function () {
+                checkInputError(this);
+            });
+            $("#submit").click(function (e) {
+                let inputs = $(".checkInput");
+                let emptyInputs = [];
 
-                    inputs.each(function() {
-                        checkInputError(this);
-                        if ($(this).val().trim() === "") {
-                            emptyInputs.push(this);
-                        }
-                    });
-                    if (emptyInputs.length > 0) {
-                        e.preventDefault();
-                        $(emptyInputs[0]).focus();
+                inputs.each(function () {
+                    checkInputError(this);
+                    if ($(this).val().trim() === "") {
+                        emptyInputs.push(this);
                     }
                 });
-                // end chack inputs
+                if (emptyInputs.length > 0) {
+                    e.preventDefault();
+                    $(emptyInputs[0]).focus();
+                }
+            });
+            // end chack inputs
 
 
-           
-           
+
+
 
             $("#spiner").show();
             $("#submit").hide();
@@ -46,7 +46,7 @@
                 type: "POST",
                 url: "buy/product/store",
                 data: formData,
-                success: function(response) {
+                success: function (response) {
                     var response = JSON.parse(response);
 
                     if (response.status == 'success') {
@@ -74,7 +74,7 @@
 
                     showNotification();
                 },
-                error: function(error) {
+                error: function (error) {
                     console.log(error);
 
                     $("#spiner").hide();
