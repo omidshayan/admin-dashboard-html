@@ -6,3 +6,32 @@
 .w100{
     width: 100%;
 }
+
+/* heigth */
+.h-auto{
+    height: auto;
+}
+
+/* display */
+.d-flex{
+    display: flex;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* align */
+.align{
+    text-align: center;
+}
+
+/* border */
+.border{
+    border: 1px solid var(--border);
+}
+
+.hr{
+    border: 1px solid var(--border);
+}
