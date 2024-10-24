@@ -23,6 +23,14 @@
     align-items: center;
     justify-content: center;
 }
+.flex-justify{
+    display: flex;
+    justify-content: center;
+}
+.flex-justify-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 /* containers */
 .larg-container {
@@ -64,6 +72,11 @@
     border: 1px solid var(--border);
 }
 
+<<<<<<< HEAD
 .hr {
+=======
+
+.hr{
+>>>>>>> a7302c7c06313bd261f99584bb68d759a01569d1
     border: 1px solid var(--border);
 }
