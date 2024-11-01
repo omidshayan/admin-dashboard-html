@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/font/Vazir.ttf');
+}
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +40,6 @@
 body {
     direction: rtl;
     overflow-x: hidden;
-    font-family: 'shabnam';
     background: var(--main);
     color: var(--text);
     font-family: "vazir";
@@ -69,6 +72,25 @@ body.light-mode {
 }
 .m15{
     margin: 15px;
+}
+.m20{
+    margin: 20px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt50{
+    margin-top: 50px;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}
+.mb50{
+    margin-bottom: 50px;
 }
 
 /* padding */
