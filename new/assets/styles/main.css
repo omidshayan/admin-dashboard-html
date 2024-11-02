@@ -102,7 +102,7 @@ body.light-mode {
     margin-left: 20px;
 }
 
-/* padding */
+/* ////////////// */
 .p10{
     padding: 10px;
 }
@@ -175,6 +175,12 @@ body.light-mode {
 /* border */
 .border {
     border: 1px solid var(--border);
+}
+.border50{
+    border-radius: 50%;
+}
+.border5{
+    border-radius: 5px;
 }
 
 /* positions */
