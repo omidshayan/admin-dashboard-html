@@ -115,6 +115,18 @@ body.light-mode {
 .p40{
     padding: 40px;
 }
+.pt10{
+    padding-top: 10px;
+}
+.pt20{
+    padding-top: 20px;
+}
+.pt30{
+    padding-top: 30px;
+}
+.pt40{
+    padding-top: 40px;
+}
 
 /* heigth */
 .h-auto {
@@ -189,4 +201,15 @@ body.light-mode {
 }
 .relative{
     position: relative;
+}
+
+/* containers */
+.l-container{
+    width: 100%;
+}
+.m-container{
+    width: 60%;
+}
+.s-container{
+    width: 30%;
 }
