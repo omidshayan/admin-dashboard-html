@@ -184,15 +184,20 @@ body.light-mode {
     text-align: right;
 }
 
-/* border */
-.border {
+/* border radius*/
+.borderr {
     border: 1px solid var(--border);
 }
-.border50{
+.borderr50{
     border-radius: 50%;
 }
-.border5{
+.borderr5{
     border-radius: 5px;
+}
+
+/* borders */
+.border-none{
+    border: none;
 }
 
 /* positions */
