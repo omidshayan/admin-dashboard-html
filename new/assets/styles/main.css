@@ -60,7 +60,7 @@ body.light-mode {
     width: 50;
 }
 
-/* margin & padding */
+/* margin */
 .m5{
     margin: 5px;
 }
@@ -95,6 +95,9 @@ body.light-mode {
 .mb15{
     margin-bottom: 15px;
 }
+.mb20{
+    margin-bottom: 20px;
+}
 .mr20{
     margin-right: 20px;
 }
@@ -102,7 +105,7 @@ body.light-mode {
     margin-left: 20px;
 }
 
-/* ////////////// */
+/* // paddings // */
 .p10{
     padding: 10px;
 }
@@ -126,6 +129,18 @@ body.light-mode {
 }
 .pt40{
     padding-top: 40px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.pb20{
+    padding-bottom: 20px;
+}
+.pb30{
+    padding-bottom: 30px;
+}
+.pb40{
+    padding-bottom: 40px;
 }
 
 /* heigth */
