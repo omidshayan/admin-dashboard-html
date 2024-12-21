@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گرفتن عکس با وب کم</title>
+    <style>
+        .student_photo {
+            width: 230px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .student_photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .capture-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: block;
+        }
+        .modal-student {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .modal-student.active {
+            display: block;
+        }
+        .video-wrapper {
+            width: 100%;
+            position: relative;
+            padding-top: 133.33%;
+            overflow: hidden;
+        }
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .modal-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .overlay-photo {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .overlay-photo.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="student_photo">
+            <img id="capturedPhoto" src="profile.png">
+            <button id="openCamera" class="capture-btn">گرفتن عکس</button>
+        </div>
+        <form id="photoForm" method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="file" id="photoInput" name="photo" style="display: none;">
+            <button type="submit">ارسال عکس</button>
+        </form>
+    </div>
+
+    <div class="overlay-photo" id="overlay"></div>
+    <div class="modal-student" id="cameraModal">
+        <div class="video-wrapper">
+            <video id="video" autoplay></video>
+        </div>
+        <div class="modal-buttons">
+            <button id="capture">عکس گرفتن</button>
+            <button id="cancel">کنسل</button>
+        </div>
+    </div>
+
+    <script>
+        const openCameraBtn = document.getElementById('openCamera');
+        const overlay = document.getElementById('overlay');
+        const cameraModal = document.getElementById('cameraModal');
+        const video = document.getElementById('video');
+        const captureBtn = document.getElementById('capture');
+        const cancelBtn = document.getElementById('cancel');
+        const capturedPhoto = document.getElementById('capturedPhoto');
+        const photoInput = document.getElementById('photoInput');
+        const captureBtnInPhoto = document.getElementById('openCamera');
+
+        let stream;
+
+        openCameraBtn.addEventListener('click', async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                overlay.classList.add('active');
+                cameraModal.classList.add('active');
+            } catch (error) {
+                alert('دسترسی به وب کم امکان‌پذیر نیست.');
+            }
+        });
+
+        captureBtn.addEventListener('click', () => {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            const width = video.videoWidth;
+            const height = video.videoHeight;
+            const aspectRatio = 3 / 4;
+
+            let cropWidth, cropHeight, cropX, cropY;
+
+            if (width / height > aspectRatio) {
+                cropHeight = height;
+                cropWidth = height * aspectRatio;
+                cropX = (width - cropWidth) / 2;
+                cropY = 0;
+            } else {
+                cropWidth = width;
+                cropHeight = width / aspectRatio;
+                cropX = 0;
+                cropY = (height - cropHeight) / 2;
+            }
+
+            canvas.width = 400;
+            canvas.height = 500;
+            context.drawImage(video, cropX, cropY, cropWidth, cropHeight, 0, 0, canvas.width, canvas.height);
+
+            canvas.toBlob((blob) => {
+                const file = new File([blob], 'photo.png', { type: 'image/png' });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                photoInput.files = dataTransfer.files; // Set the file input's value
+            });
+
+            capturedPhoto.src = canvas.toDataURL('image/png');
+            captureBtnInPhoto.style.display = 'none';
+            closeCameraModal();
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            closeCameraModal();
+        });
+
+        function closeCameraModal() {
+            if (stream) {
+                const tracks = stream.getTracks();
+                tracks.forEach(track => track.stop());
+            }
+            overlay.classList.remove('active');
+            cameraModal.classList.remove('active');
+        }
+
+        capturedPhoto.addEventListener('click', async () => {
+            if (!capturedPhoto.src) return;
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                overlay.classList.add('active');
+                cameraModal.classList.add('active');
+            } catch (error) {
+                alert('دسترسی به وب کم امکان‌پذیر نیست.');
+            }
+        });
+    </script>
+</body>
+</html>
